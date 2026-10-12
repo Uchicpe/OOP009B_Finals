@@ -31,30 +31,25 @@ class ParkingSlotWidget(QWidget):
         ## UCHI'S EDIT: REMODEL OF VEHICLE
         pen = QPen(color, 2)
         brush = QBrush()
-        
-        # Body Outline
         painter.setPen(pen)
+
+        # Body Outline
         painter.drawRoundedRect(26, 15, 42, 69, 30, 12)
 
-        # Trunk Outline
-        painter.setPen(pen)
+        # Trunk Outline        
         painter.drawRoundedRect(25, 70, 44, 20, 10, 10)
 
-        # Hood Outline
-        painter.setPen(pen)
+        # Hood Outline        
         painter.drawRoundedRect(25, 5, 44, 30, 15, 15)
 
-        # Side Rear Mirror (Left) Outline
-        painter.setPen(pen)
+        # Side Rear Mirror (Left) Outline        
         painter.drawLine(QPoint(20, 32), QPoint(25, 28))
 
-        # Side Rear Mirror (Right) Outline
-        painter.setPen(pen)
+        # Side Rear Mirror (Right) Outline        
         painter.drawLine(QPoint(74, 32), QPoint(68, 28))
 
         # "Inner" Roof Outline
-        painter.setPen(pen)
-        brush.setColor(QColor("#2d2d30"))
+        brush.setColor(QColor("#2d2d30")) # Hide Excess Lines
         brush.setStyle(Qt.BrushStyle.SolidPattern)
         painter.setBrush(brush)
         painter.drawRoundedRect(32, 27, 30, 48, 30, 5)
